@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.contenedor-principal {
+  display: grid;
+  grid-template-areas:
+    "header header header"
+    "aside main main"
+    "footer footer footer";
+  min-height: 100vh;
+}
+
+@media (width < 768px) {
+  .contenedor-principal {
+    grid-template-areas:
+      "header header header"
+      "main main main"
+      "footer footer footer";
+  }
+
+  .contenedor-principal aside {
+    display: none;
+  }
+
+  .contenedor-principal main {
+    width: 100vw;
+  }
+}
